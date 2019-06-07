@@ -10,13 +10,6 @@ class Drink extends React.Component {
       quantity: 0
     }
   }
-
-  onClickGetButton(){
-    this.props.item.quantity = this.props.item.quantity -1;
-    console.log(this.props.item.quantity);
-    console.log(this.props.item)
-  }
-
   render() {
     const { item } = this.props;
     return (
@@ -29,7 +22,7 @@ class Drink extends React.Component {
         <Card.Content extra >
           <Card.Header style={{ textAlign: 'center' }}>
             <Button size='mini' as='div' labelPosition='right'>
-              <Button size='mini' color='red' onClick={()=>this.onClickGetButton()}>GET</Button>
+              <Button size='mini' color='red'>GET</Button>
               <Label as='a' basic color='red' pointing='left'>
                 {item.quantity}
               </Label>
